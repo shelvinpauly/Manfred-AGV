@@ -19,7 +19,7 @@ The aim of the product is to reduce the human hours required for logistics in th
 ### Module Description
 The Software Product will consist of 4 modules each tasked with different aspects of the product, these modules are:
 1. Communication Module: The purpose of this module is to establish communication with the user, the robot needs the input of pickup and drop location from the user, this will serve as the input for the later modules. This module can also be used as the kill switch for the robot in case of any problems.
-2. Path planning, localization and navigation module: This module uses several sensors like cameras and lidar to create a map(NAV2 library ROS2) of the warehouse. This map will help in localizing the current location of the robot and navigating the object to the desired location. This module also consists of obstacle detection which will help in avoiding collisions and dynamically change the path robot takes in case any obstacle is encountered. This module also controls the actuators which control the motion of the robot.
+2. Path planning, localization and navigation module: This module uses several sensors like cameras and lidar to create a map of the warehouse. This map will help in localizing the current location of the robot and navigating the object to the desired location. This module also consists of obstacle detection which will help in avoiding collisions and dynamically change the path robot takes in case any obstacle is encountered. This module also controls the actuators which control the motion of the robot.
 3. Perception module: This module will be used to locate the pickup object and the drop off location in the 3d world coordinates which will be used by the manipulator module to pickup or drop the object from the exact location. This module includes object detection and poses estimation of the desired object to facilitate the pickup of the object without damaging the product that needs to be picked up. Different sensors will be used to locate the objects in 3d world coordinates.
 4. Manipulator planning and control: This module will take the 3d location and pose of the desired object from the previous module. This input will be used to plan and move the manipulator (robotic hand) to the extracted location and place the object back in a bin, the module will also have to inform the bot when the task is executed so that object can move to the next task of navigating to the drop off location.
 
@@ -120,7 +120,7 @@ The Members are Graduate students at The University of Maryland, College Park. T
 - Overview of proposed work including timeline, risks, and mitigations.
 - UML diagrams
 - Github repository with [README](./readme.md)
-- TravisCI setup with code coverage using Coveralls.
+- GithubCI setup with code coverage using Codecov.
 - Valgrind Check for Memory Leaks.
 - Git Version Control Workflow.
 - Developer-level documentation.
@@ -148,7 +148,8 @@ Agile Iterative Development Process will be used to develop the software along T
 ### ROS Packages
  - tiago_simulation
  - tiago_2dnav
- - move_base
+ - tiago_maps
+ - google cartographer
  
 ### Software Dependencies
 - OpenCV 4.6.0 (covered under the open-source Apache 2 License)
@@ -157,8 +158,9 @@ Agile Iterative Development Process will be used to develop the software along T
 
 
 ### Tools and Technologies
-`Ubuntu 22.04(LTS)` `C++ 14+` `CMake` `OpenCV` `GitHubCI` `Coveralls`
-`Makefile` `CMake` `cpplint` `cppcheck` `clangd` `Valgrind` `GTest` `VScode`
+`Ubuntu 20.04(LTS)` `C++ 14+` `ROS` `Melodic` `CMake` `OpenCV` `GitHubCI` `Codecov`
+`Makefile` `CMake` `cpplint` `cppcheck` `clangd` `Valgrind` `GTest` `VScode` `Catkin`
+`Moveit` `Gazebo` `Rviz`
 
 
 ### Installation via Command Line
