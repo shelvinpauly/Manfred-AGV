@@ -5,8 +5,6 @@
 ---
 
 
-<! -- [![codecov](https://codecov.io/gh/sairampolina/Inventory-Management-AGV/branch/phase3/graph/badge.svg?token=YUMKWMA7D0)](https://codecov.io/gh/sairampolina/Inventory-Management-AGV) -- >
-
 ## Overview
 ### Manfred - The Automated Guided Vehicle
 
